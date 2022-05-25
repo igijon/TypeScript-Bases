@@ -3,25 +3,21 @@
 */
 
 class Heroe {
-    alterEgo: string;
-    edad: number;
-    nombreReal: number;
+    // alterEgo: string;
+    // edad: number;
+    // nombreReal: number;
 
-    imprimirNombre() {
-        return this.alterEgo+' '+this.nombreReal;
-    }
-
+    //Con una sola línea de código se crea la propiedad y se le asigna el valor que recibe
+    //por parámetros
+    constructor(
+        public alterEgo?: string, 
+        public edad?: number, 
+        public nombreReal?: string
+    ) {}
 }
 
-interface Personaje2 {
-    alterEgo?: string;
-    edad?: number;
-    nombreReal?: number;
 
-    imprimirNombre?: () => string; //Pero no puedo implementarlo aquí
-}
 
-const ironman = new Heroe();
-const spiderman: Personaje2 = {}
+const ironman = new Heroe('Ironman', 45, 'Tony');
 
 console.log(ironman);
